@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\KinectScripts\KinectManager.cs">
+    <Files>
+      <File FileName="Assets\scripts\Imagenes.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\eventoClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\KinectScripts\Samples\SimpleGestureListener.cs" Line="1" Column="1" />
+      <File FileName="Assets\KinectScripts\KinectManager.cs" Line="895" Column="45" />
+      <File FileName="Assets\KinectScripts\KinectGestures.cs" Line="1" Column="1" />
+      <File FileName="Assets\SwipeMenu\Scripts\SwipeMenu\Menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\GesturesDemo\Scripts\PresentationScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" Line="1" Column="1" />
+      <File FileName="Assets\DB SQLITE\Scripts\MyDBConnection.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="d:\Unity proyects\New Unity Project 1\Assets\Fungus\Scripts\Editor\EditorExtensions.cs" line="22" column="1" />
+      <Breakpoint file="D:\Unity proyects\New Unity Project 1\Assets\scripts\eventoClick.cs" line="26" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\GesturesDemo\Scripts\PresentationScript.cs" line="39" offsetX="389" offsetY="646" expression="slideTextures" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
