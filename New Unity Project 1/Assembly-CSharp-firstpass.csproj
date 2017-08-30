@@ -140,10 +140,10 @@
  <HintPath>D:/Unity Final version/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Data.SqliteClient">
- <HintPath>D:/Unity proyects/New Unity Project 1/Assets/DB SQLITE/Plugins/Mono.Data.SqliteClient.dll</HintPath>
+ <HintPath>D:/Tesis/Tesis/New Unity Project 1/Assets/DB SQLITE/Plugins/Mono.Data.SqliteClient.dll</HintPath>
  </Reference>
  <Reference Include="System.Data">
- <HintPath>D:/Unity proyects/New Unity Project 1/Assets/DB SQLITE/Plugins/System.Data.dll</HintPath>
+ <HintPath>D:/Tesis/Tesis/New Unity Project 1/Assets/DB SQLITE/Plugins/System.Data.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity Final version/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
