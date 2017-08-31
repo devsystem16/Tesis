@@ -37,6 +37,8 @@ public class KinectGestures
 		RaiseRightHand,
 		RaiseLeftHand,
 		Psi,
+		UpHandRightOrLeft,
+ 
 		Tpose,
 		Stop,
 		Wave,
@@ -304,6 +306,42 @@ public class KinectGestures
 						break;
 				}
 				break;
+
+
+
+
+
+		case Gestures.UpHandRightOrLeft:
+
+			switch(gestureData.state)
+			{
+			case 0:  // gesture detection
+				if( (jointsTracked[rightHandIndex] && jointsTracked[rightShoulderIndex] &&
+					(jointsPos[rightHandIndex].y - jointsPos[rightShoulderIndex].y) > 0.1f )
+
+					 || 
+
+					(jointsTracked[leftHandIndex] && jointsTracked[leftShoulderIndex] &&
+						(jointsPos[leftHandIndex].y - jointsPos[leftShoulderIndex].y) > 0.1f))
+				{
+					SetGestureJoint(ref gestureData, timestamp, rightHandIndex, jointsPos[rightHandIndex]);
+				}
+				break;
+
+			case 1:  // gesture complete
+				bool isInPose = (jointsTracked[rightHandIndex] && jointsTracked[rightShoulderIndex] &&
+					(jointsPos[rightHandIndex].y - jointsPos[rightShoulderIndex].y) > 0.1f )
+
+					||
+
+					(jointsTracked[leftHandIndex] && jointsTracked[leftShoulderIndex] &&
+					(jointsPos[leftHandIndex].y - jointsPos[leftShoulderIndex].y) > 0.1f);
+
+				Vector3 jointPos = jointsPos[gestureData.joint];
+				CheckPoseComplete(ref gestureData, timestamp, jointPos, isInPose, KinectWrapper.Constants.PoseCompleteDuration);
+				break;
+			}
+			break;
 
 			// check for Tpose
 			case Gestures.Tpose:
