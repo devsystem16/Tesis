@@ -48,7 +48,6 @@
   <ItemGroup>
      <Compile Include="Assets\ClaseA.cs" />
      <Compile Include="Assets\ClaseB.cs" />
-     <Compile Include="Assets\ClsGameController.cs" />
      <Compile Include="Assets\DB SQLITE\Scripts\MyDBConnection.cs" />
      <Compile Include="Assets\DepthColliderDemo\Scripts\DepthImageViewer.cs" />
      <Compile Include="Assets\DepthColliderDemo\Scripts\EggMover.cs" />
@@ -547,6 +546,8 @@
      <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
      <Compile Include="Assets\MMM.cs" />
+     <Compile Include="Assets\Nieveles\nivel 1\ClsGameController.cs" />
+     <Compile Include="Assets\Nieveles\nivel 1\EventoClickN1.cs" />
      <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
      <Compile Include="Assets\SwipeMenu\Scripts\Demo Scripts\DemoSceneSwitcher.cs" />
      <Compile Include="Assets\SwipeMenu\Scripts\Demo Scripts\ExampleCharacterSelector.cs" />

@@ -31,3 +31,36 @@ D:\Unity proyects\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.csproj
 D:\Unity proyects\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\Unity proyects\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.pdb
 D:\Unity proyects\New Unity Project 1\Temp\bin\Debug\System.Data.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Mono.Cecil.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Mono.Data.SqliteClient.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\nunit.framework.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\System.Data.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEditor.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.Analytics.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.HoloLens.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.VR.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Unity.DataContract.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Unity.CecilTools.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEditor.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.UI.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\nunit.framework.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.Analytics.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.HoloLens.xml
+D:\Tesis\Tesis\New Unity Project 1\Temp\bin\Debug\UnityEngine.VR.xml
+D:\Tesis\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+D:\Tesis\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.dll
+D:\Tesis\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.pdb
