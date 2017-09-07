@@ -51,6 +51,6 @@ public class PlayVideo : MonoBehaviour {
         video.color = new Vector4(video.color.r, video.color.g, video.color.b, 0);
 
 	 
-		SceneManager.LoadScene ("KinectAvatarsDemo");
+		SceneManager.LoadScene ("menuPersonaje");
     }
 }

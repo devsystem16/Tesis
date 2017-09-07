@@ -1,23 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Nieveles\nivel 1\EventoClickN1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\menuPersonaje\ClsControllerMenuPersonaje.cs">
     <Files>
-      <File FileName="Assets\scripts\eventoClick.cs" Line="1" Column="1" />
-      <File FileName="Assets\KinectScripts\Samples\SimpleGestureListener.cs" Line="85" Column="3" />
-      <File FileName="Assets\KinectScripts\KinectManager.cs" Line="877" Column="4" />
-      <File FileName="Assets\KinectScripts\KinectGestures.cs" Line="1" Column="1" />
-      <File FileName="Assets\SwipeMenu\Scripts\SwipeMenu\Menu.cs" Line="1" Column="1" />
-      <File FileName="Assets\GesturesDemo\Scripts\PresentationScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" Line="1" Column="1" />
-      <File FileName="Assets\DB SQLITE\Scripts\MyDBConnection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Nieveles\nivel 1\ClsGameController.cs" Line="27" Column="4" />
-      <File FileName="Assets\Nieveles\nivel 1\EventoClickN1.cs" Line="15" Column="22" />
+      <File FileName="Assets\DB SQLITE\Scripts\MyDBConnection.cs" Line="27" Column="2" />
+      <File FileName="Assets\scripts\menuPersonaje\ClsControllerMenuPersonaje.cs" Line="23" Column="16" />
+      <File FileName="Assets\Nieveles\n1\1_problema\ClsGameController.cs" Line="55" Column="11" />
+      <File FileName="Assets\scripts\ControllerSQL.cs" Line="10" Column="1" />
+      <File FileName="Assets\scripts\Entidades\Listados.cs" Line="19" Column="99" />
+      <File FileName="Assets\scripts\menuPersonaje\InitMenuPersonaje.cs" Line="32" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="d:\Unity proyects\New Unity Project 1\Assets\Fungus\Scripts\Editor\EditorExtensions.cs" line="22" column="1" />
       <Breakpoint file="D:\Unity proyects\New Unity Project 1\Assets\scripts\eventoClick.cs" line="26" column="1" />
+      <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="21" column="1" />
+      <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="19" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

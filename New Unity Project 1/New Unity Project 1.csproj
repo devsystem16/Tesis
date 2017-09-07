@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.2f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,14 +81,11 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Data">
-      <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Data.Sqlite">
-      <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.Sqlite.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Data.SqliteClient">
       <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.SqliteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\DB SQLITE\Plugins\System.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -98,8 +97,7 @@
   <ItemGroup>
     <Compile Include="Assets\ClaseA.cs" />
     <Compile Include="Assets\ClaseB.cs" />
-    <Compile Include="Assets\ClsGameController.cs" />
-    <Compile Include="Assets\DB SQLITE\Scripts\DBConnector.cs" />
+    <Compile Include="Assets\DB SQLITE\Scripts\MyDBConnection.cs" />
     <Compile Include="Assets\DepthColliderDemo\Scripts\DepthImageViewer.cs" />
     <Compile Include="Assets\DepthColliderDemo\Scripts\EggMover.cs" />
     <Compile Include="Assets\DepthColliderDemo\Scripts\EggSpawner.cs" />
@@ -597,7 +595,12 @@
     <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
     <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
     <Compile Include="Assets\MMM.cs" />
+    <Compile Include="Assets\Nieveles\n1\1_problema\ClsGameController.cs" />
+    <Compile Include="Assets\Nieveles\n1\1_problema\EventoClickN1.cs" />
     <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />
+    <Compile Include="Assets\scripts\Entidades\Listados.cs" />
+    <Compile Include="Assets\scripts\Entidades\Partida.cs" />
+    <Compile Include="Assets\scripts\Entidades\Usuario.cs" />
     <Compile Include="Assets\SwipeMenu\Scripts\Demo Scripts\DemoSceneSwitcher.cs" />
     <Compile Include="Assets\SwipeMenu\Scripts\Demo Scripts\ExampleCharacterSelector.cs" />
     <Compile Include="Assets\SwipeMenu\Scripts\Demo Scripts\ExampleMenuAudioPlayer.cs" />
@@ -614,11 +617,13 @@
     <Compile Include="Assets\Texturas\video\PlayVideo.cs" />
     <Compile Include="Assets\entidades\GestureCompleted.cs" />
     <Compile Include="Assets\scripts\CambiarTexto.cs" />
+    <Compile Include="Assets\scripts\ControllerSQL.cs" />
     <Compile Include="Assets\scripts\Find.cs" />
     <Compile Include="Assets\scripts\Imagenes.cs" />
     <Compile Include="Assets\scripts\Sonidos.cs" />
     <Compile Include="Assets\scripts\SwipeHandler.cs" />
     <Compile Include="Assets\scripts\eventoClick.cs" />
+    <Compile Include="Assets\scripts\menuPersonaje\ClsControllerMenuPersonaje.cs" />
     <Compile Include="Assets\scripts\rotar.cs" />
     <Compile Include="Assets\scripts\triggers.cs" />
   </ItemGroup>

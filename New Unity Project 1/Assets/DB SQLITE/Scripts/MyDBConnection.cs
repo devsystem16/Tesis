@@ -23,7 +23,19 @@ public class MyDBConnection : MonoBehaviour {
 		oCnn.Open ();
 	}
 
-	public void select (string sqlQuery){
+	public void cerrar (){
+	
+		oComando = null;
+		 
+		if (odr != null) {
+			if (!odr.IsClosed) {
+				odr.Close ();
+			}
+			odr = null;
+		}
+		oCnn.Close ();
+	}
+	public void seelccionar (string sqlQuery){
 		oComando.CommandText = sqlQuery;
 		odr= oComando.ExecuteReader ();
 		while (odr.Read ()) {
@@ -31,7 +43,13 @@ public class MyDBConnection : MonoBehaviour {
 		}
 	}
 
-	public void sqlIAE (string sqlQuery){
+    public IDataReader select (string sqlQuery)
+    {
+        oComando.CommandText = sqlQuery;
+        odr = oComando.ExecuteReader();
+        return odr;
+    }
+    public void sqlIAE (string sqlQuery){
 		oComando.CommandText = sqlQuery;
 		oComando.ExecuteNonQuery ();
 	}

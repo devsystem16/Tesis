@@ -121,14 +121,11 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Data">
-      <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Data.Sqlite">
-      <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.Sqlite.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Data.SqliteClient">
       <HintPath>Assets\DB SQLITE\Plugins\Mono.Data.SqliteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\DB SQLITE\Plugins\System.Data.dll</HintPath>
     </Reference>
     <Reference Include="Editor.ReorderableList">
       <HintPath>Assets\Fungus\Thirdparty\Reorderable List Field\Editor\Editor.ReorderableList.dll</HintPath>
