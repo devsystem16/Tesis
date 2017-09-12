@@ -1,0 +1,9 @@
+ 
+-- Obtener siguiente nivel. 
+
+select * from Escena  ec where ec.orden = (
+  select 
+  (e.orden) from DetallePartida dp  inner join Escena e on dp.IDEscena  = e.IDEscena  
+  and dp.IDPartida =( select p.IDPartida from Partida p where idusuario =1) order by e.orden desc limit 1
+  )
+  

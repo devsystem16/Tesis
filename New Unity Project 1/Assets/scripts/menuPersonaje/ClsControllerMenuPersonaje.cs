@@ -12,16 +12,21 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 
 
 	private  void redirecting (string seleccion ,List<Partida> partidas ){
-		bool existe=false;
+        Usuario player = new Usuario();
+        bool existe=false;
 		for (int i = 0; i < partidas.Count; i++) {
 			if (seleccion.Equals (partidas [i].Usuario.Descripcion)) {
 				existe = true;
-				break;
+                player = partidas[i].Usuario;
+
+                break;
 			}
 		}
-		if (existe)
+		if (existe) { 
+            // Cargar donde se quedo. 
 			SceneManager.LoadScene ("1_info");
-		else 
+        }
+        else 
 			SceneManager.LoadScene ("menuNuevoPersonaje");
 	}
 	void OnMouseDown ()
