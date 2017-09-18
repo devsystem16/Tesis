@@ -42,6 +42,22 @@ public class MyDBConnection : MonoBehaviour {
 			Debug.Log (odr.GetString (1));
 		}
 	}
+    public int insertar(string sqlQuery)
+    {
+        try
+        {
+            oComando.CommandText = sqlQuery;
+            int registros = -1;
+            registros = oComando.ExecuteNonQuery();
+            return registros;
+        }
+        catch (System.Exception)
+        {
+            return -1;
+        }
+        
+    }
+
 
     public IDataReader select (string sqlQuery)
     {

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ImagenRespuesta : MonoBehaviour {
+public class ImagenRespuesta : Pregunta {
 
     int iDIMagenRespuesta;
-    Pregunta pregunta;
+  
     string ruta;
     string descripcion;
     int correcta;
 
     public ImagenRespuesta() { }
-    public ImagenRespuesta(int iDIMagenRespuesta, Pregunta pregunta, string ruta, string descripcion, int correcta)
+    public ImagenRespuesta(int iDIMagenRespuesta,  string ruta, string descripcion, int correcta)
     {
         this.iDIMagenRespuesta = iDIMagenRespuesta;
-        this.pregunta = pregunta;
+        
         this.ruta = ruta;
         this.descripcion = descripcion;
         this.correcta = correcta;
@@ -32,19 +32,7 @@ public class ImagenRespuesta : MonoBehaviour {
             iDIMagenRespuesta = value;
         }
     }
-
-    public Pregunta Pregunta
-    {
-        get
-        {
-            return pregunta;
-        }
-
-        set
-        {
-            pregunta = value;
-        }
-    }
+ 
 
     public string Ruta
     {
@@ -59,7 +47,7 @@ public class ImagenRespuesta : MonoBehaviour {
         }
     }
 
-    public string Descripcion
+    public string DescripcionR
     {
         get
         {

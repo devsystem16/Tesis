@@ -35,7 +35,7 @@ public class InitMenuPersonaje : MonoBehaviour {
 			
 			} else {
 				
-				personajesDisponibles [i].GetComponent<Renderer> ().material.mainTexture = Resources.Load<Texture> (partidas [i].Usuario.Ruta); 
+				personajesDisponibles [i].GetComponent<Renderer> ().material.mainTexture = Resources.Load<Texture> (partidas [i].Ruta/* .Usuario.Ruta*/); 
 
 			}
 		}

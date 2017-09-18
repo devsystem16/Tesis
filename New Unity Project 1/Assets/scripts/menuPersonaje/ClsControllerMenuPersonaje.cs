@@ -12,19 +12,24 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 
 
 	private  void redirecting (string seleccion ,List<Partida> partidas ){
+        Partida partidaActual = new Partida();
         Usuario player = new Usuario();
         bool existe=false;
 		for (int i = 0; i < partidas.Count; i++) {
-			if (seleccion.Equals (partidas [i].Usuario.Descripcion)) {
+			if (seleccion.Equals (partidas [i].Descripcion)) {
 				existe = true;
-                player = partidas[i].Usuario;
-
+              //  player = partidas[i].Usuario;
+                partidaActual = partidas[i];
                 break;
 			}
 		}
-		if (existe) { 
+		if (existe) {
+            // Asignar el usuario que actualmente esta jugando.
+            GameObject.Find("jugador").GetComponent<GUIText>().text = partidaActual.IdUsuario.ToString();// player.IdUsuario.ToString();
             // Cargar donde se quedo. 
-			SceneManager.LoadScene ("1_info");
+			SceneManager.LoadScene (partidaActual.nivel("last"));
+
+
         }
         else 
 			SceneManager.LoadScene ("menuNuevoPersonaje");

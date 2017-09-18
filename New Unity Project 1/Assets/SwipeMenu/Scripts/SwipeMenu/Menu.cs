@@ -116,7 +116,7 @@ namespace SwipeMenu
 		/// <param name="item">Item.</param>
 		public void AnimateToTargetItem (MenuItem item)
 		{
-			float offset = CalcPosXInverse (item.transform.position.x);
+			//float offset = CalcPosXInverse (item.transform.position.x);
 
 			///	iTween.ValueTo (gameObject, iTween.Hash ("from", _currentMenuPosition, "to", _currentMenuPosition + offset, 
 			///                                       "time", 0.5, "easetype", iTween.EaseType.easeOutCubic, "onupdate", "UpdateCurrentMenuPosition"));

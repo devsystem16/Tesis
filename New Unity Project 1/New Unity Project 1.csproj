@@ -611,10 +611,12 @@
     <Compile Include="Assets\SwipeMenu\Scripts\SwipeMenu\SubMenuItem.cs" />
     <Compile Include="Assets\Texturas\video\PlayVideo.cs" />
     <Compile Include="Assets\entidades\GestureCompleted.cs" />
+    <Compile Include="Assets\scripts\1_info\init1_info.cs" />
     <Compile Include="Assets\scripts\1_problema\Init1_problema.cs" />
     <Compile Include="Assets\scripts\CambiarTexto.cs" />
     <Compile Include="Assets\scripts\ControllerSQL.cs" />
     <Compile Include="Assets\scripts\Entidades\Badge.cs" />
+    <Compile Include="Assets\scripts\Entidades\Controlaador.cs" />
     <Compile Include="Assets\scripts\Entidades\DetallePartida.cs" />
     <Compile Include="Assets\scripts\Entidades\Escena.cs" />
     <Compile Include="Assets\scripts\Entidades\Experiencia.cs" />

@@ -1,23 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mono.Data.SqliteClient;
+using System.Data;
 
-public class Escena : MonoBehaviour {
+
+public class Escena : Nivel {
 
     int iDEscena;
-    Nivel nivel;
     string descripcion;
     string ruta;
     int orden;
     public Escena() { }
 
-    public Escena(int iDEscena, Nivel nivel, string descripcion, string ruta, int orden)
+    public Escena(int iDEscena,   string descripcion, string ruta, int orden)
     {
         this.iDEscena = iDEscena;
-        this.nivel = nivel;
+   
         this.descripcion = descripcion;
         this.ruta = ruta;
         this.orden = orden;
+    }
+
+
+    public   void cargar(string prametro_nombreEscena_or_Id) {
+   
+        MyDBConnection oCnn = new MyDBConnection();
+        oCnn.conectar();
+        IDataReader odr = oCnn.select(ControllerSQL.escena_cargarEscena(prametro_nombreEscena_or_Id));
+
+        if (odr != null)
+        {
+            while (odr.Read())
+            {
+                this.iDEscena = odr.GetInt32(0);
+                this.IdNivel = odr.GetInt32(1);
+                this.descripcion = odr.GetString(2);
+                this.ruta = odr.GetString(3);
+                this.orden = odr.GetInt32(4);
+            }
+        } // fin if
+        if (odr != null)
+        {
+            if (!odr.IsClosed)
+                odr.Close();
+        }
+        oCnn.cerrar();
+
     }
 
     public int IDEscena
@@ -33,20 +62,9 @@ public class Escena : MonoBehaviour {
         }
     }
 
-    public Nivel Nivel
-    {
-        get
-        {
-            return nivel;
-        }
+  
 
-        set
-        {
-            nivel = value;
-        }
-    }
-
-    public string Descripcion
+    public string DescripcionEscena
     {
         get
         {
@@ -72,7 +90,7 @@ public class Escena : MonoBehaviour {
         }
     }
 
-    public int Orden
+    public int OrdenEscena
     {
         get
         {

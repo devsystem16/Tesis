@@ -112,7 +112,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 	                              KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
 		// para saber que opcion selecciono el usuario.
-		GameObject objRespuesta = GameObject.Find ("opcionSeleccionada");
+		//GameObject objRespuesta = GameObject.Find ("opcionSeleccionada");
 
 		string sGestureText = gesture +"";
 		if (gesture == KinectGestures.Gestures.Click) {
