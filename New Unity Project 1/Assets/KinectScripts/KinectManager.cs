@@ -1021,13 +1021,13 @@ public class KinectManager : MonoBehaviour
 		}
 		catch(DllNotFoundException e)
 		{
-			string message = "Please check the Kinect SDK installation.";
+			string message = "Verificar la instalación del Kinect SDK.";
 			Debug.LogError(message);
 			Debug.LogError(e.ToString());
 			if(CalibrationText != null)
 				CalibrationText.GetComponent<GUIText>().text = message;
 				
-			return;
+			// return;
 		}
 		catch (Exception e)
 		{
@@ -1338,9 +1338,20 @@ public class KinectManager : MonoBehaviour
 	{
 		if(KinectInitialized)
 		{
+
+            try
+            {
+                KinectWrapper.NuiShutdown();
+                instance = null;
+            }
+            catch (Exception)
+            {
+
+                Debug.Log("En esta pc no se encuentra instalado el kinect.dll");
+            }
+
 			// Shutdown OpenNI
-			KinectWrapper.NuiShutdown();
-			instance = null;
+		
 		}
 	}
 

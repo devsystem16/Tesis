@@ -693,8 +693,15 @@ public class KinectWrapper
 
 	public static bool PollSkeleton(ref NuiTransformSmoothParameters smoothParameters, ref NuiSkeletonFrame skeletonFrame)
 	{
-		bool newSkeleton = false;
+        bool newSkeleton = false;
+        try
+        {
+
+       
+   
+		  newSkeleton = false;
 		
+         
 		int hr = KinectWrapper.NuiSkeletonGetNextFrame(0, ref skeletonFrame);
 		if(hr == 0)
 		{
@@ -709,8 +716,13 @@ public class KinectWrapper
 				Debug.Log("Skeleton Data Smoothing failed");
 			}
 		}
-		
-		return newSkeleton;
+        }
+        catch (Exception)
+        {
+
+          
+        }
+        return newSkeleton;
 	}
 	
 	public static bool PollColor(IntPtr colorStreamHandle, ref byte[] videoBuffer, ref Color32[] colorImage)
