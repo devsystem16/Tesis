@@ -1,0 +1,5 @@
+C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\obj\Debug\Assembly-CSharp-firstpass.pdb

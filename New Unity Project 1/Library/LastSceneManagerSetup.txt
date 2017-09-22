@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Nieveles/menuPersonaje/menuPersonaje.unity
+- path: Assets/Nieveles/n8/8_problema/8_problema.unity
   isLoaded: 1
   isActive: 1

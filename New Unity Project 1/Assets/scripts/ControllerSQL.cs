@@ -22,7 +22,7 @@ public class ControllerSQL : MonoBehaviour {
 
 
 
-	public static string sql_cargarPartidasUsuarios = "select  u.IDUsuario , u.ruta , u.descripcion , p.IDPartida, P.fecha from Usuario u   inner  join Partida p  on u.IDUsuario = p.IDUsuario LIMIT 3";
+	public static string sql_cargarPartidasUsuarios = "select  u.IDUsuario , u.ruta , u.descripcion , p.IDPartida, P.fecha from Usuario u   inner  join Partida p  on u.IDUsuario = p.IDUsuario where  p.estado =1  order by u.descripcion  LIMIT 3";
 
     public static string usuario_obtenerCodigoPartida(object IDUsuario)
     {
@@ -41,7 +41,18 @@ public class ControllerSQL : MonoBehaviour {
    public static string pregunta_listarRespuestas(string nivel) {
         return "select * from ImagenRespuesta where IDPregunta =" + nivel + " order by RANDOM() limit  "+ limite_respuestas.ToString() + ";"; 
     }
-    
+
+    public static string Imagen_ListarImagen(string idImagenPregunta)
+	{   
+        return "  select    i.* from Pregunta p inner join ImagenPregunta ip on ip.IDPregunta = p.IDPregunta  inner join Imagenes i on i.IDImagenPregunta = ip.IDImagenPregunta where ip.IDImagenPregunta = " + idImagenPregunta +  "   order by RANDOM() limit  3;";
+    }
+
+    public static string pregunta_listarImagenPregunta(string IDPregunta)
+    {
+		return "select ip.* from Pregunta p  inner join ImagenPregunta ip on ip.IDPregunta = p.IDPregunta where p.IDPregunta = " + IDPregunta + "   order by RANDOM() limit  3; ";
+     
+    }
+
     public static string usuario_consultarUsuario(int ID)
     {
         return "select u.* from Usuario u  where u.IDusuario = "+ ID + ";";
