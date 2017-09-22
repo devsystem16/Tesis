@@ -11,6 +11,10 @@ public class ControllerSQL : MonoBehaviour {
         return "select * from Escena where ruta='"+ parametro + "' or  IDEscena= '"+ parametro + "'"; 
     }
 
+
+
+    public static string usuario_ObtenerusuarioSinPartidas = "   select * from  usuario where IDUsuario not in ( select IDUsuario from partida where estado=1)";
+
     public static string partida_cargarPartidaByid(  object IDPartida) {
 
         return " select  * from Partida where IDpartida = "+IDPartida+";";

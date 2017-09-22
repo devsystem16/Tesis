@@ -89,6 +89,38 @@ namespace Assets.scripts.Entidades
         }
 
 
+
+        public List<Usuario> cargarUsuariosSinPartida()
+        {
+            List<Usuario> usuarios = new List<Entidades.Usuario>();
+
+            MyDBConnection oCnn = new MyDBConnection();
+            oCnn.conectar();
+            IDataReader odr = oCnn.select(ControllerSQL.usuario_ObtenerusuarioSinPartidas);
+            if (odr != null)
+            {
+                 
+                while (odr.Read())
+                {
+                    Usuario oUser = new Usuario();
+
+                    oUser.IdUsuario = odr.GetInt32(0);
+                    oUser.Ruta = odr.GetString(1);
+                    oUser.Descripcion = odr.GetString(2);
+                    usuarios.Add(oUser);
+                }
+            } // fin if
+            if (odr != null)
+            {
+                if (!odr.IsClosed)
+                    odr.Close();
+            }
+            oCnn.cerrar();
+
+            return usuarios;
+        }
+
+
         public   string nivel(string opcion )
         {
             MyDBConnection oCnn = new MyDBConnection();
