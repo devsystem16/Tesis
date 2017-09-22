@@ -20,6 +20,21 @@ namespace Assets.scripts.Entidades
         public Usuario()
         { }
 
+
+
+        public bool guardarPartida() {
+             string sql = "insert into Partida (IDUsuario, descripcion, fecha, estado) values ("+this.idUsuario+", '"+this.descripcion+"', '"+ System.DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "', 1)";
+ 
+            MyDBConnection oCnn = new MyDBConnection();
+                oCnn.conectar();
+
+                if (oCnn.insertar(sql) != -1)
+                    return true;
+           
+            return false;
+
+        }
+
         public static int obtenerIDPartida(object IDusuario)
         {
             MyDBConnection oCnn = new MyDBConnection();

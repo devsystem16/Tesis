@@ -593,6 +593,7 @@
     <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
     <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
     <Compile Include="Assets\MMM.cs" />
+    <Compile Include="Assets\Nieveles\menuNuevoPersonaje\ControllerMenuNuevoPersonaje.cs" />
     <Compile Include="Assets\Nieveles\n1\1_problema\ClsGameController.cs" />
     <Compile Include="Assets\Nieveles\n1\1_problema\EventoClickN1.cs" />
     <Compile Include="Assets\OverlayDemo\Scripts\KinectOverlayer.cs" />

@@ -43,7 +43,7 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 		if (Input.GetMouseButton (0)) {
 			GameObject obj = gameObject;
 			List<Partida> partidas =	Listados.cargarPartidas ();
-			redirecting (obj.name, partidas);
+			redirecting (obj.GetComponent<GUIText>().text, partidas);
 
 			/*
 			switch (obj.name) {

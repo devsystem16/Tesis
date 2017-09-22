@@ -11,27 +11,28 @@ public class ControllerMenuNuevoPersonaje : MonoBehaviour {
 
 
     List<Usuario> usuarios;
+    Usuario unUsuario;
     void Awake() {
         Usuario user = new Assets.scripts.Entidades.Usuario();
         usuarios = new List<Usuario>();
         usuarios = user.cargarUsuariosSinPartida();
 
 
+
+
+        foreach (Usuario unUsuario in usuarios)
+        {
+            GameObject obj = GameObject.Find(unUsuario.Descripcion);
+            string a = obj.name;
+            obj.GetComponent<GUIText>().text = "disponible";
+
+        }
+
         for (int i = 0; i < jugadoresDisponibles.Count; i++)
-          jugadoresDisponibles[i].SetActive(false);
-
-
-            GameObject obsssj = GameObject.Find("jugador2");
-        obsssj.SetActive(false);
-         
-
-        for (int i = 0; i < jugadoresDisponibles.Count; i++)
-            jugadoresDisponibles[i].SetActive(true);
-        //foreach (Usuario unUsuario in usuarios) {
-        //    GameObject obj = GameObject.Find(unUsuario.Descripcion);
-        //    obj.SetActive(true);
-
-        //}
+        {
+            if (!jugadoresDisponibles[i].GetComponent<GUIText>().text.Equals("disponible"))
+                jugadoresDisponibles[i].SetActive(false);
+        }
 
 
 
@@ -51,8 +52,10 @@ public class ControllerMenuNuevoPersonaje : MonoBehaviour {
 	}
 
 
-    void OnMouseDown() {
+    void OnMouseDown()
+    {
 
+        Debug.Log("asdasdasd");
 
         if (Input.GetMouseButton(0)) {
 
@@ -69,9 +72,36 @@ public class ControllerMenuNuevoPersonaje : MonoBehaviour {
                     break;
 
 
+                case "jugador0":
+                    unUsuario = new Usuario(); unUsuario.IdUsuario = 1;
+                    unUsuario.cargar();
+                    if (unUsuario.guardarPartida()) 
+                        SceneManager.LoadScene("menuPersonaje");
+                    
+                    break;
+
+                case "jugador1":
+                    unUsuario = new Usuario(); unUsuario.IdUsuario = 2;
+                    unUsuario.cargar();
+                    if (unUsuario.guardarPartida())
+                        SceneManager.LoadScene("menuPersonaje");
+                    break;
+
+                case "jugador2":
+                    unUsuario = new Usuario(); unUsuario.IdUsuario = 3;
+                    unUsuario.cargar();
+                    if (unUsuario.guardarPartida())
+                        SceneManager.LoadScene("menuPersonaje");
+                    break;
+
+                case "jugador3":
+                    unUsuario = new Usuario(); unUsuario.IdUsuario = 4;
+                    unUsuario.cargar();
+                    if (unUsuario.guardarPartida())
+                        SceneManager.LoadScene("menuPersonaje");
+                    break;
 
 
-                
                 default:
                     break;
             }

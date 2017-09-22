@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Nieveles/menuNuevoPersonaje/menuNuevoPersonaje.unity
+- path: Assets/Nieveles/menuPersonaje/menuPersonaje.unity
   isLoaded: 1
   isActive: 1
