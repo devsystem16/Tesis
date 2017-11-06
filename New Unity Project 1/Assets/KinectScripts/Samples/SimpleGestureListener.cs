@@ -9,11 +9,12 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 {
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
-	
 	// private bool to track if progress message has been displayed
 	private bool progressDisplayed;
-	
-	
+
+
+    public ControllerCameras controllerCameras;
+ 
 	public void UserDetected(uint userId, int userIndex)
 	{
 		// as an example - detect these user specific gestures
@@ -106,8 +107,8 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
 	}
 
-	int imgSeleccionada =   1 ;
-	private  int CantidaClick =0 ;
+	//int imgSeleccionada =   1 ;
+	//private  int CantidaClick =0 ;
 	public bool GestureCompleted (uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
@@ -123,70 +124,21 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         if (GestureInfo != null)
         {
             GestureInfo.GetComponent<GUIText>().text = sGestureText;
- 
-			if(sGestureText == "SwipeLeft"){
 
 
-				GameObject obj = GameObject.Find ("Menu");
-				Menu m = obj.GetComponent<Menu> ();
-				m.set_currentMenuPosition (1.0f);
-				m.UpdateMenuItemsPositionInWorldSpace (0f);
+            if (sGestureText == "Wave")
+            {
+                Debug.Log("Abrir simbolos");
+                controllerCameras.SendMessage("activarCamara", "CamaraMenuOperadores");
+            }
 
 
+            if (sGestureText == "SwipeLeft"){
 
-
-				/*
-
-
-			GameObject cuboPresent = GameObject.Find("PresentationCube");
-			PresentationScript clsPresentacion =  cuboPresent.GetComponent<PresentationScript>();
-			clsPresentacion.Siguienteimg();
-
-			//	GameObject + objinfo = GameObject.Find("cuadroDeInformacion");
-				 
-				imgSeleccionada -- ;
-				if (imgSeleccionada > 4  ){
-					imgSeleccionada = 1 ;
-				}
-				
-				if (imgSeleccionada <1  ){
-					imgSeleccionada =  4;
-				}
-			
-				objRespuesta.GetComponent<Text> ().text = imgSeleccionada.ToString();
-				sGestureText += string.Format(   "Imagen seleccionada: " + imgSeleccionada.ToString());
-
-				*/
 			}
 			if(sGestureText == "SwipeRight"){
 
-				GameObject obj1 = GameObject.Find ("Menu");
-				Menu m1 = obj1.GetComponent<Menu> ();
- 					m1.set_currentMenuPosition (-1.0f);
-					m1.UpdateMenuItemsPositionInWorldSpace (0f);
-			 
- 
-
- 
-
-
-			/*	GameObject cuboPresent = GameObject.Find("PresentationCube");
-				PresentationScript clsPresentacion =  cuboPresent.GetComponent<PresentationScript>();
-				clsPresentacion.AnteriorImg();
-				imgSeleccionada  ++ ;
-				
-				if (imgSeleccionada > 4  ){
-					imgSeleccionada = 1 ;
-				}
-				
-				if (imgSeleccionada <1  ){
-					imgSeleccionada =  4;
-				}
-				sGestureText += string.Format(   "Imagen seleccionada: " + imgSeleccionada.ToString());
-				  
-				objRespuesta.GetComponent<Text> ().text = imgSeleccionada.ToString();*/
 			}
-
 
 			if(sGestureText == "Psi"){
 
@@ -198,55 +150,12 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 				GameObject cuboPresent = GameObject.Find("objImagenes");
 				Imagenes clsImagenes =  cuboPresent.GetComponent<Imagenes>();
 				btnMusica.GetComponent<Renderer> ().material.mainTexture = clsImagenes.GetImagenes () [  ((estado == true )? 1:0 )];
-
-
 			}
-
- 
-
 
 
 
 			if (sGestureText == "Push") {
-
 				darClickizquierdo ();
-		
-				GameObject objNivel = GameObject.Find ("nivel");
-				string nivel = objNivel.GetComponent<Text> ().text;
-			 
-				if (nivel.Equals ("s1")) {
-					CantidaClick++;
-
-					if (CantidaClick == 2) {
-						SceneManager.LoadScene ("level1");
-						CantidaClick = 0;
-					}
-
-
-				}
-
-				if (nivel.Equals ("s2")) {
-					CantidaClick++;
-
-					if (CantidaClick == 2) {
-						SceneManager.LoadScene ("KinectAvatarsDemo");
-						CantidaClick = 0;
-					}
-
-
-				}
-				 
-
-				GameObject cursorPush = GameObject.Find("HandCursor");
-				Double x =  Convert.ToDouble ( Math.Round ( cursorPush.transform.position.x ,2));
-				Double y =  Convert.ToDouble ( Math.Round  ( cursorPush.transform.position.y,2 ));
-
-				sGestureText += ( "X: " +x.ToString()+ "    Y: " + y.ToString()  );
-
-
-
-
-
 			}
 
 			

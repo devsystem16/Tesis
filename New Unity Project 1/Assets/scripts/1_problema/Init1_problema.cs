@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.scripts.Entidades;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Init1_problema : MonoBehaviour {
 
@@ -32,9 +33,10 @@ public class Init1_problema : MonoBehaviour {
     public void mostrarPivote() {
         Debug.Log(pivotePregunta);
     }
- 
- public   void asignarRespuestasAopcioens() {
-
+    public Text t;
+    public   void asignarRespuestasAopcioens() {
+        if (t != null)
+             t.text = preguntas[pivotePregunta].Descripcion;
 
         for (int i = 0; i < opcionesRespuestas.Count; i++)
         {

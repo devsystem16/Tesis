@@ -49,7 +49,7 @@ namespace Assets.scripts.Entidades
             oCnn.cerrar();
  
         }
-        public   string nivel(string opcion) {
+        public   string nivel1(string opcion) {
             MyDBConnection oCnn = new MyDBConnection();
             oCnn.conectar();
             IDataReader odr = oCnn.select(ControllerSQL.sql_cargarNivel(opcion,IdUsuario));

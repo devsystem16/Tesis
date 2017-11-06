@@ -13,7 +13,7 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 
 	private  void redirecting (string seleccion ,List<Partida> partidas ){
         Partida partidaActual = new Partida();
-        Usuario player = new Usuario();
+        //Usuario player = new Usuario();
         bool existe=false;
 		for (int i = 0; i < partidas.Count; i++) {
 			if (seleccion.Equals (partidas [i].Descripcion)) {
@@ -41,11 +41,17 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 
 
 		if (Input.GetMouseButton (0)) {
+ 
+         
 			GameObject obj = gameObject;
-			List<Partida> partidas =	Listados.cargarPartidas ();
-			redirecting (obj.GetComponent<GUIText>().text, partidas);
+ 
+                List<Partida> partidas = Listados.cargarPartidas();
+                redirecting(obj.GetComponent<GUIText>().text, partidas);
 
-			/*
+
+         
+
+            /*
 			switch (obj.name) {
 			case "jugador0": 
 		 
@@ -61,7 +67,7 @@ public class ClsControllerMenuPersonaje : MonoBehaviour {
 			}
 			*/
 
-		}
+        }
 
 
 

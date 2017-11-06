@@ -32,7 +32,10 @@ public class InitMenuPersonaje : MonoBehaviour {
 			if (i >= partidas.Count) {
 				
 				personajesDisponibles [i].GetComponent<Renderer> ().material.mainTexture = texturaAddJugador;
-			
+                GameObject obj = GameObject.Find("jugador"+i+"_progress");
+                obj.SetActive(false);
+
+
 			} else {
 				
 				personajesDisponibles [i].GetComponent<Renderer> ().material.mainTexture = Resources.Load<Texture> (partidas [i].Ruta/* .Usuario.Ruta*/);
