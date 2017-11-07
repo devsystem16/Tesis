@@ -26,4 +26,14 @@ public class Constantes : MonoBehaviour {
         return ruta;
     }
 
+
+    public static string concatenar(List<GameObject> listaObjetos) {
+        string cadena = "";
+        for (int i = 0; i < listaObjetos.Count; i++)
+        {
+            cadena += listaObjetos[i].GetComponent<GUIText>().text.Trim().Replace("\n","").Replace("▼", "")  + ( (listaObjetos.Count == (i+1) ) ? "" : ",");
+        }
+        return cadena;
+    }
+
 }

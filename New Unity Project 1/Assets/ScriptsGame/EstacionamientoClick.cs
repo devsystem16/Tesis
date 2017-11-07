@@ -31,37 +31,42 @@ public class EstacionamientoClick : MonoBehaviour {
             // valido que el objeto seleccionado  no sea nullo.
             if (objeto != null)
             {
-
+ 
                 switch (objeto.name)
                 {
                     case "bus1":
-                        estacionamientoController.SendMessage("asignarImagen",  Constantes.rutaInteraccionBus);
+                        // enviar  parametros de que imagen y número de bus se seleccionaron.
+                        estacionamientoController.SendMessage("asignarImagen",  new object [] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus1").GetComponent<TextMesh>().text });
+
                         break;
 
                     case "bus2":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaInteraccionBus);
+                        // enviar  parametros de que iamgen y número de bus se seleccionaron.
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus2").GetComponent<TextMesh>().text });
                         break;
 
                     case "bus3":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaInteraccionBus);
+                        // enviar  parametros de que iamgen y número de bus se seleccionaron.
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus3").GetComponent<TextMesh>().text });
+
                         break;
 
                     case "personaEstacionamiento":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaInteraccionPersona);
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionPersona ,""});
                         break;
 
                     case "op1":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaOperador("op1"));
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op1") ,""} );
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op2":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaOperador("op2"));
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op2"), "" });
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op3":
-                        estacionamientoController.SendMessage("asignarImagen", Constantes.rutaOperador("op3"));
+                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op3"), "" });
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
