@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Nieveles/n1/1_problema/1_problema.unity
+- path: Assets/Nieveles/busMenosGasolina/busMenosGasolina.unity
   isLoaded: 1
   isActive: 1
