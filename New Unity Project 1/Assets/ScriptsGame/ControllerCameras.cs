@@ -12,6 +12,20 @@ public class ControllerCameras : MonoBehaviour {
     public GameObject pistaDesdeAire;
     public GameObject techoAutobus;
 
+	 
+	public List<GameObject> objetosOcultables ;
+
+	public void mostrarEscena ( int activo){
+		bool estado = (activo ==1) ? true : false ;
+		for (int i = 0; i < objetosOcultables.Count; i++) {
+			objetosOcultables [i].SetActive (estado);
+		}
+	}
+
+
+
+
+
 	void Start () {
       
 	}
@@ -27,18 +41,18 @@ public class ControllerCameras : MonoBehaviour {
 
         switch (camara)
         {
-            case "CamaraEstacionamiento":
+		case "CamaraEstacionamiento":
                 //pistaDesdeAire.SetActive(false);
                 //techoAutobus.SetActive(false);
-                camaraMenuOperadores.SetActive(false);
-                camaraEstacionamiento.SetActive(true);
+			camaraMenuOperadores.SetActive (false);
+			camaraEstacionamiento.SetActive (true);
+			mostrarEscena (1);
                 break;
 
             case "CamaraMenuOperadores":
                 camaraEstacionamiento.SetActive(false);
-                //pistaDesdeAire.SetActive(false);
-                //techoAutobus.SetActive(false);
                 camaraMenuOperadores.SetActive(true);
+			mostrarEscena (0);
                 break;
 
             case "CamaraPistaDesdeAire":

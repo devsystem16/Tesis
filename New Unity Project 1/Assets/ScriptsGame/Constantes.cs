@@ -11,7 +11,7 @@ public class Constantes : MonoBehaviour {
     public static string rutaInteraccionLlanta = @"Interaccion\llanta";
     public static string rutaInteraccionNiño = @"Interaccion\niño";
 
-
+	public static string  nombreConductor = "Jaime";
 
     public static string rutaOperador(string numeroOperador) {
         string ruta = "";

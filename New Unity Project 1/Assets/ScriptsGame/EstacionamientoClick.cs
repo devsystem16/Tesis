@@ -8,6 +8,7 @@ public class EstacionamientoClick : MonoBehaviour {
 
 
 
+
     public EstacionamientoController estacionamientoController;
 
 
@@ -34,39 +35,68 @@ public class EstacionamientoClick : MonoBehaviour {
  
                 switch (objeto.name)
                 {
-                    case "bus1":
+				case "bus1":
                         // enviar  parametros de que imagen y número de bus se seleccionaron.
-                        estacionamientoController.SendMessage("asignarImagen",  new object [] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus1").GetComponent<TextMesh>().text });
-
+                     //   estacionamientoController.SendMessage("asignarImagen",  new object [] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus1").GetComponent<TextMesh>().text });
+ 
+					estacionamientoController.SendMessage ("validarRespuesta", new object [] {
+						"bus",
+						GameObject.Find ("numeroBus1").GetComponent<TextMesh> ().text
+					});
                         break;
 
                     case "bus2":
                         // enviar  parametros de que iamgen y número de bus se seleccionaron.
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus2").GetComponent<TextMesh>().text });
-                        break;
+					estacionamientoController.SendMessage ("validarRespuesta", new object [] {
+						"bus",
+						GameObject.Find ("numeroBus2").GetComponent<TextMesh> ().text
+					});
+
+
+						break;
 
                     case "bus3":
                         // enviar  parametros de que iamgen y número de bus se seleccionaron.
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionBus, GameObject.Find("numeroBus3").GetComponent<TextMesh>().text });
+					estacionamientoController.SendMessage ("validarRespuesta", new object [] {
+						"bus",
+						GameObject.Find ("numeroBus3").GetComponent<TextMesh> ().text
+					});
+
 
                         break;
 
-                    case "personaEstacionamiento":
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionPersona ,""});
+				case "personaEstacionamiento":
+
+					// enviar  parametros de que iamgen y número de bus se seleccionaron.
+					estacionamientoController.SendMessage ("validarRespuesta", new object [] {
+						"persona",
+						 "",
+					});
                         break;
+
+
+				case "llanta":
+
+					// enviar  parametros de que iamgen y número de bus se seleccionaron.
+					estacionamientoController.SendMessage ("validarRespuesta", new object [] {
+						"llanta",
+						"",
+					});
+					break;
+
 
                     case "op1":
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op1") ,""} );
+					estacionamientoController.SendMessage("validarRespuesta", new object[] { "igual" ,""} );
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op2":
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op2"), "" });
+					estacionamientoController.SendMessage("validarRespuesta", new object[] { "comparacion", "" });
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op3":
-                        estacionamientoController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op3"), "" });
+					estacionamientoController.SendMessage("validarRespuesta", new object[] { Constantes.rutaOperador("op3"), "" });
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 

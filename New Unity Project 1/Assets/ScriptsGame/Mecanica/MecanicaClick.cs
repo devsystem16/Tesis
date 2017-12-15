@@ -34,29 +34,29 @@ public class MecanicaClick : MonoBehaviour {
                 switch (objeto.name)
                 {
                     case "niñoMecanica":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionNiño, "" });
+					mecanicaController.SendMessage("validarRespuesta",  "niño");
                         break;
 
                     case "bus":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionBus, "" });
+					mecanicaController.SendMessage("validarRespuesta", "bus");
                         break;
 
                     case "llanta":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaInteraccionLlanta, "" });
+					mecanicaController.SendMessage("validarRespuesta", "llanta");
                         break;
 
                     case "op1":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op1"), "" });
+					mecanicaController.SendMessage("validarRespuesta", "igual");
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op2":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op2"), "" });
+					mecanicaController.SendMessage("validarRespuesta", "comparacion");
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 
                     case "op3":
-                        mecanicaController.SendMessage("asignarImagen", new object[] { Constantes.rutaOperador("op3"), "" });
+					mecanicaController.SendMessage("validarRespuesta", "");
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;
 

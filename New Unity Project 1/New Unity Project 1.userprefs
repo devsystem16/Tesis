@@ -1,13 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScriptsGame\Mecanica\MecanicaController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScriptsGame\CuerpoBus.cs">
     <Files>
-      <File FileName="Assets\scripts\rotar.cs" Line="11" Column="32" />
-      <File FileName="Assets\ScriptsGame\Mecanica\MecanicaClick.cs" Line="37" Column="55" />
-      <File FileName="Assets\ScriptsGame\Mecanica\MecanicaController.cs" Line="85" Column="2" />
-      <File FileName="Assets\ScriptsGame\EstacionamientoClick.cs" Line="1" Column="1" />
-      <File FileName="Assets\ScriptsGame\EstacionamientoController.cs" Line="94" Column="50" />
-      <File FileName="Assets\ScriptsGame\Constantes.cs" Line="38" Column="1" />
+      <File FileName="Assets\ScriptsGame\ControllerCameras.cs" Line="1" Column="1" />
+      <File FileName="Assets\KinectScripts\Samples\SimpleGestureListener.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\Mecanica\MecanicaController.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\Mecanica\MecanicaClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\Motor.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\MoveAtoB.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\Semaforo.cs" Line="22" Column="2" />
+      <File FileName="Assets\ScriptsGame\CuerpoBus.cs" Line="34" Column="4" />
+      <File FileName="Assets\no used\SwipeMenu\Scripts\Demo Scripts\UpdateMenuItemOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\menuPersonaje\ControllerProgreso.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -17,7 +21,6 @@
       <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="21" column="1" />
       <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="19" column="1" />
       <Breakpoint file="C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\Assets\Resources\nivel 8\ControllerNivel8.cs" line="23" column="1" />
-      <Breakpoint file="C:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\ScriptsGame\Mecanica\MecanicaController.cs" line="48" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

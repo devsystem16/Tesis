@@ -14,8 +14,8 @@ namespace UnityStandardAssets.Utility
         public float minDuration = 8;
         public float maxDuration = 10;
 
-        private float m_MaxLifetime=0f;
-        private bool m_EarlyStop = false;
+        private float m_MaxLifetime;
+        private bool m_EarlyStop;
 
 
         private IEnumerator Start()
@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Utility
             // find out the maximum lifetime of any particles in this effect
             foreach (var system in systems)
             {
-                //m_MaxLifetime = Mathf.Max(system.startLifetime, m_MaxLifetime);
+                m_MaxLifetime = Mathf.Max(system.main.startLifetime.constant, m_MaxLifetime);
             }
 
             // wait for random duration
@@ -41,7 +41,8 @@ namespace UnityStandardAssets.Utility
             // turn off emission
             foreach (var system in systems)
             {
-                //system.enableEmission = false;
+                var emission = system.emission;
+                emission.enabled = false;
             }
             BroadcastMessage("Extinguish", SendMessageOptions.DontRequireReceiver);
 
