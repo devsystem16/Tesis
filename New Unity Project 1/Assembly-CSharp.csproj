@@ -562,6 +562,7 @@
      <Compile Include="Assets\RoadTool\Scripts\RoadUtils.cs" />
      <Compile Include="Assets\ScriptsGame\Constantes.cs" />
      <Compile Include="Assets\ScriptsGame\ControllerCameras.cs" />
+     <Compile Include="Assets\ScriptsGame\ControllerCiudad.cs" />
      <Compile Include="Assets\ScriptsGame\CuerpoBus.cs" />
      <Compile Include="Assets\ScriptsGame\EstacionamientoClick.cs" />
      <Compile Include="Assets\ScriptsGame\EstacionamientoController.cs" />
