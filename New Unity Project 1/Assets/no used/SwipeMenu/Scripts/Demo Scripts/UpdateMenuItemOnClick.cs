@@ -7,6 +7,18 @@ using System.Collections;
 /// </summary>
 public class UpdateMenuItemOnClick : MonoBehaviour
 {
+
+
+	public GameObject menuIteraccion ;
+	public GameObject canvasPreguntaUsuario;
+	public GameObject camaraBus;
+
+
+	public GameObject iteracionesArealizar;
+	public GameObject interacionesFijadas ;
+	public GameObject accion ;
+
+
 	public Text debugText;
 	public TextMesh titleText;
 
@@ -21,7 +33,8 @@ public class UpdateMenuItemOnClick : MonoBehaviour
 	/// </summary>
 	public void UpdateStar ()
 	{
-		debugText.text = "Load: " + titleText.text;
+		 
+	/*	debugText.text = "Load: " + titleText.text;
 
 		if (_currentItem == 2)
 			return;
@@ -29,7 +42,30 @@ public class UpdateMenuItemOnClick : MonoBehaviour
 		_currentItem = (_currentItem + 1) % starRenderers.Length;
 
 		starRenderers [_currentItem].sprite = starSprite;
-	
+	*/
+
+	}
+
+
+
+
+
+	public void OnMouseDown (){
+		if (Input.GetMouseButton (0)) {
+		
+			Debug.Log (titleText.text);
+
+			if (titleText.text.Equals ("OK")) {
+			
+				menuIteraccion.SetActive (false);
+				canvasPreguntaUsuario.SetActive (true);
+				camaraBus.SetActive (true);
+
+
+				accion.GetComponent<TextMesh>().text ="validarIteraciones";
+			}
+		}
+
 
 	}
 }

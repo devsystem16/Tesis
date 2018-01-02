@@ -7,6 +7,55 @@ using UnityEngine.SceneManagement ;
 using  SwipeMenu ;
 public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
 {
+
+
+
+
+	public GameObject gesto1;
+	public GameObject gesto2;
+	public GameObject gesto3;
+	public GameObject gesto4;
+	public GameObject gesto1Er;
+	public GameObject gesto2Er;
+	public GameObject gesto3Er;
+	public GameObject gesto4Er;
+
+	public ClsMostrarMensajes clsMostrarMensajes;
+
+	public TextMesh problema;
+	public GameObject menuIteraccion ;
+	public GameObject canvasPreguntaUsuario;
+	public GameObject camaraBus;
+	public GameObject numIteraciones;
+
+
+
+
+	public GameObject menuSemaforo;
+	public  GameObject paso1if; 
+	public  GameObject paso2if; 
+	public  GameObject paso3if; 
+	public  GameObject paso4if; 
+
+
+
+	// info texto
+	public Text txtInstruccion;
+	public Text txtPergamino;
+
+	public Text txtInstruccionPantallaCiclos ;
+
+
+	public string gestoRealizado ="";
+	public  string getGestoRealizado () {
+	
+		return   this.gestoRealizado;
+	}
+	void Awake (){
+		 
+	}
+
+
 	// GUI Text to display the gesture messages.
 	public GUIText GestureInfo;
 	// private bool to track if progress message has been displayed
@@ -48,7 +97,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 	{
 		//GestureInfo.guiText.text = string.Format("{0} Progress: {1:F1}%", gesture, (progress * 100));
 		if (gesture == KinectGestures.Gestures.Click && progress > 0.3f) {
-			string sGestureText = string.Format ("{0} {1:F1}% complete", gesture, progress * 100);
+			string sGestureText = string.Format ("{0} {1:F1}% procesando", gesture, progress * 100);
 			if (GestureInfo != null)
 				GestureInfo.GetComponent<GUIText> ().text = sGestureText;
 			
@@ -109,6 +158,9 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 
 	//int imgSeleccionada =   1 ;
 	//private  int CantidaClick =0 ;
+
+
+
 	public bool GestureCompleted (uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              KinectWrapper.NuiSkeletonPositionIndex joint, Vector3 screenPos)
 	{
@@ -125,31 +177,107 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
         {
             GestureInfo.GetComponent<GUIText>().text = sGestureText;
 
+			// condicional if
+			if (sGestureText == "Tpose")
+			{
+				gestoRealizado = "if";
+				Debug.Log("Condicional");
+			
 
+				if (problema.text.Equals ("pr2")) {
+				
+
+					gesto2.SetActive (true);
+					clsMostrarMensajes.PrintMensaje ("correcto", "Muy bien,  la acción condicional permitira tomar una decisión al llegar a un semáforo.", 5f);
+
+					StartCoroutine (interaccion ("pr2_if", 5f));
+
+
+				
+				
+				}
+
+
+			}
+
+			// Operadores
             if (sGestureText == "Wave")
             {
-                Debug.Log("Abrir simbolos");
+				gestoRealizado = "operadores";
+                Debug .Log("Abrir operadores");
                 controllerCameras.SendMessage("activarCamara", "CamaraMenuOperadores");
             }
 
-
+			// Aumentar contador 
             if (sGestureText == "SwipeLeft"){
-
+				gestoRealizado = "contador++";
+				Debug.Log("Contador ++");
+				float numero = float.Parse (numIteraciones.GetComponent<TextMesh> ().text);
+				numero++;
+				numIteraciones.GetComponent<TextMesh> ().text = numero.ToString ();
 			}
+
+			// Decrementar contador.
 			if(sGestureText == "SwipeRight"){
+				gestoRealizado = "contador--";
+				Debug.Log("Contador --");
+
+				float numero = float.Parse (numIteraciones.GetComponent<TextMesh> ().text);
+				if (numero > 0)
+				numero--;
+				numIteraciones.GetComponent<TextMesh> ().text = numero.ToString ();
 
 			}
 
+			// While
+			if (sGestureText == "RaiseRightHand") {
+				gestoRealizado = "while";
+				Debug.Log("While");
+			}
+
+			// Do While
+			if (sGestureText == "RaiseLeftHand") {
+				gestoRealizado = "doWhile";
+				Debug.Log("Do while");
+
+
+				if (problema.text.Equals ("pr1")) {
+					gesto4Er.SetActive (true);
+					clsMostrarMensajes.PrintMensaje ("error", "Lo siento, te has equivocado", 3f);
+
+					StartCoroutine (interaccion ("errorEnFor" , 3f));
+				//	gesto4Er.SetActive (false);
+				}
+
+
+			}
+
+			//  For
 			if(sGestureText == "Psi"){
+				Debug.Log("For");
+
+				gestoRealizado = "for";
+				if (problema.text.Equals ("pr1")) {
+ 					
+
+					gesto1.SetActive (true);
+
+
+					clsMostrarMensajes.PrintMensaje ("correcto", "Muy bien, la acción repetir hasta se utiliza para iterar cuando se conoce el límite.  " , 5f);
+					StartCoroutine (interaccion ("pr1_for" , 5f));
+
+		 
+				}
 
 				// Clic en el boton de silencio.
-				GameObject objSound = GameObject.Find ("musica");
+			/*	GameObject objSound = GameObject.Find ("musica");
 				bool estado = !objSound.GetComponent<AudioSource> ().mute;
 				objSound.GetComponent<AudioSource> ().mute = estado;
 				GameObject btnMusica = GameObject.Find ("btnMusica");
 				GameObject cuboPresent = GameObject.Find("objImagenes");
 				Imagenes clsImagenes =  cuboPresent.GetComponent<Imagenes>();
 				btnMusica.GetComponent<Renderer> ().material.mainTexture = clsImagenes.GetImagenes () [  ((estado == true )? 1:0 )];
+				*/
 			}
 
 
@@ -164,6 +292,45 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 		progressDisplayed = false;
 		return true;
 	}
+
+
+
+	IEnumerator interaccion(string cual , float tiempo){  
+
+		if (cual.Equals ("pr1_for")) {
+			yield return new WaitForSeconds (tiempo);
+			txtInstruccionPantallaCiclos.text = txtInstruccion.text;
+			camaraBus.SetActive (false); 
+			menuIteraccion.SetActive (true);
+			canvasPreguntaUsuario.SetActive (false);
+			gesto1.SetActive (false);
+		} else if (cual.Equals ("pr2_if")) {
+			yield return new WaitForSeconds (tiempo);
+
+
+			canvasPreguntaUsuario.SetActive (false);
+			camaraBus.SetActive (false);
+
+			menuSemaforo.SetActive (true);
+			paso1if.SetActive (true);
+			gesto2.SetActive (false);
+		 
+		} else if (cual.Equals ("errorEnFor")) {
+			yield return new WaitForSeconds (tiempo);
+
+			gesto4Er.SetActive (false);
+
+		} 
+	}
+
+
+
+
+
+
+
+
+
 
 	public bool GestureCancelled (uint userId, int userIndex, KinectGestures.Gestures gesture, 
 	                              KinectWrapper.NuiSkeletonPositionIndex joint)

@@ -19,7 +19,7 @@ namespace Fungus.EditorUtils
         /// <param name="baseType">The base Type from which all returned Types derive</param>
         /// <param name="classOnly">If true, only class Types will be returned</param>
         /// <returns></returns>
-        public static System.Type[] FindDerivedTypesFromAssembly(this System.Reflection.Assembly assembly, System.Type baseType, bool classOnly = true)
+      public static System.Type[] FindDerivedTypesFromAssembly(this System.Reflection.Assembly assembly, System.Type baseType, bool classOnly  )
         {
             if (assembly == null)
                 Debug.LogError("Assembly must be defined");
@@ -49,7 +49,7 @@ namespace Fungus.EditorUtils
             );
 
             return types.ToArray();
-        }
+        } 
 
         /// <summary>
         /// A convenient method for calling the above.
@@ -59,7 +59,7 @@ namespace Fungus.EditorUtils
         /// <param name="baseType"></param>
         /// <param name="classOnly"></param>
         /// <returns></returns>
-        public static System.Type[] FindDerivedTypes(System.Type baseType, bool classOnly = true)
+      public static System.Type[] FindDerivedTypes(System.Type baseType, bool classOnly )
         {
             return FindDerivedTypesFromAssembly(System.Reflection.Assembly.GetAssembly(baseType), baseType, classOnly);
         }

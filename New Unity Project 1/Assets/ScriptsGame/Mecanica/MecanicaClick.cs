@@ -45,7 +45,7 @@ public class MecanicaClick : MonoBehaviour {
 					mecanicaController.SendMessage("validarRespuesta", "llanta");
                         break;
 
-                    case "op1":
+                    case "asignacion":
 					mecanicaController.SendMessage("validarRespuesta", "igual");
                         controllerCameras.SendMessage("activarCamara", "CamaraEstacionamiento");
                         break;

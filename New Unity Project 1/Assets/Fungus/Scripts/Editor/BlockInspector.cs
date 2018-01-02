@@ -33,7 +33,7 @@ namespace Fungus.EditorUtils
 
         // Cache the block and command editors so we only create and destroy them
         // when a different block / command is selected.
-        protected BlockEditor activeBlockEditor;
+       // protected BlockEditor activeBlockEditor;
         protected CommandEditor activeCommandEditor;
         protected Command activeCommand; // Command currently being inspected
 
@@ -89,15 +89,7 @@ namespace Fungus.EditorUtils
                 return;
             }
 
-            if (activeBlockEditor == null ||
-                !block.Equals(activeBlockEditor.target))
-            {
-                DestroyImmediate(activeBlockEditor);
-                activeBlockEditor = Editor.CreateEditor(block) as BlockEditor;
-            }
-
-            activeBlockEditor.DrawBlockName(flowchart);
-
+          
             UpdateWindowHeight();
 
             float width = EditorGUIUtility.currentViewWidth;
@@ -108,7 +100,7 @@ namespace Fungus.EditorUtils
             GUILayout.BeginArea(blockRect);
 
             blockScrollPos = GUILayout.BeginScrollView(blockScrollPos, GUILayout.Height(flowchart.BlockViewHeight));
-            activeBlockEditor.DrawBlockGUI(flowchart);
+           
             GUILayout.EndScrollView();
 
             Command inspectCommand = null;
@@ -159,7 +151,7 @@ namespace Fungus.EditorUtils
 
             GUILayout.Space(7);
 
-            activeBlockEditor.DrawButtonToolbar();
+             
 
             commandScrollPos = GUILayout.BeginScrollView(commandScrollPos);
 

@@ -9,8 +9,8 @@ public class MoveAtoB : MonoBehaviour {
 	public List<Transform> PuntosPosicionamiento ;
 	public float velocidadArranqueBus; 
 	public float volicidadGiro =1;
-	int  indicePuntos = 1 ;
-	private string StatusGame  = "idle";
+	public int  indicePuntos = 1 ;
+	public string StatusGame  = "idle";
 
 
 
@@ -19,7 +19,7 @@ public class MoveAtoB : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StatusGame = "run";
+		StatusGame = "stop";
 	}
 
 

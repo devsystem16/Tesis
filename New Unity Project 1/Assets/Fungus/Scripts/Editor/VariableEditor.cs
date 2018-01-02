@@ -6,7 +6,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Fungus ;
 namespace Fungus.EditorUtils
 {
     [CustomEditor (typeof(Variable), true)]
@@ -38,7 +38,7 @@ namespace Fungus.EditorUtils
                                          Flowchart flowchart,
                                          string defaultText,
                                          Func<Variable, bool> filter, 
-                                         Func<string, int, string[], int> drawer = null)
+                                         Func<string, int, string[], int> drawer )
         {
             List<string> variableKeys = new List<string>();
             List<Variable> variableObjects = new List<Variable>();

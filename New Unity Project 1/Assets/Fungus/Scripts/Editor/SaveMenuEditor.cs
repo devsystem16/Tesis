@@ -21,7 +21,7 @@ namespace Fungus.EditorUtils
                 if (saveMenu != null)
                 {
                     PlayerPrefs.DeleteKey(saveMenu.SaveDataKey);
-                    FlowchartWindow.ShowNotification("Deleted Save Data");
+                  //  FlowchartWindow.ShowNotification("Deleted Save Data");
                 }
             }
 

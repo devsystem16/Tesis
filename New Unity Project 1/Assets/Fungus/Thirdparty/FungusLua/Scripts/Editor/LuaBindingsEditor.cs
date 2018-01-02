@@ -344,7 +344,7 @@ namespace Fungus
         /// Returns a new binding key that is guaranteed to be a valid Lua variable name and
         /// not to clash with any existing binding in the list.
         /// </summary>
-        protected virtual string GetUniqueKey(LuaBindings luaBindings, string originalKey, int ignoreIndex = -1)
+        protected virtual string GetUniqueKey(LuaBindings luaBindings, string originalKey, int ignoreIndex  )
         {
             string baseKey = originalKey;
 

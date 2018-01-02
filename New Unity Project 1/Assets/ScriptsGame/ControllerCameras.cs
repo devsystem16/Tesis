@@ -13,6 +13,9 @@ public class ControllerCameras : MonoBehaviour {
     public GameObject techoAutobus;
 
 	 
+
+	public GameObject menuOperadores ;
+	public GameObject canvas;
 	public List<GameObject> objetosOcultables ;
 
 	public void mostrarEscena ( int activo){
@@ -46,12 +49,16 @@ public class ControllerCameras : MonoBehaviour {
                 //techoAutobus.SetActive(false);
 			camaraMenuOperadores.SetActive (false);
 			camaraEstacionamiento.SetActive (true);
+			menuOperadores.SetActive (false);
+			canvas.SetActive (true);
 			mostrarEscena (1);
                 break;
 
-            case "CamaraMenuOperadores":
-                camaraEstacionamiento.SetActive(false);
-                camaraMenuOperadores.SetActive(true);
+		case "CamaraMenuOperadores":
+			camaraEstacionamiento.SetActive (false);
+			camaraMenuOperadores.SetActive (true);
+			menuOperadores.SetActive (true);
+			canvas.SetActive (false);
 			mostrarEscena (0);
                 break;
 

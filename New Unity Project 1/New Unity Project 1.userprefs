@@ -1,17 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScriptsGame\CuerpoBus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fungus\Scripts\Editor\VariableListAdaptor.cs">
     <Files>
-      <File FileName="Assets\ScriptsGame\ControllerCameras.cs" Line="1" Column="1" />
       <File FileName="Assets\KinectScripts\Samples\SimpleGestureListener.cs" Line="1" Column="1" />
       <File FileName="Assets\ScriptsGame\Mecanica\MecanicaController.cs" Line="1" Column="1" />
       <File FileName="Assets\ScriptsGame\Mecanica\MecanicaClick.cs" Line="1" Column="1" />
-      <File FileName="Assets\ScriptsGame\Motor.cs" Line="1" Column="1" />
-      <File FileName="Assets\ScriptsGame\MoveAtoB.cs" Line="1" Column="1" />
-      <File FileName="Assets\ScriptsGame\Semaforo.cs" Line="22" Column="2" />
-      <File FileName="Assets\ScriptsGame\CuerpoBus.cs" Line="34" Column="4" />
-      <File FileName="Assets\no used\SwipeMenu\Scripts\Demo Scripts\UpdateMenuItemOnClick.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menuPersonaje\ControllerProgreso.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\Semaforo.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\CuerpoBus.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\ControllerCiudad.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\ClickIf.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Scripts\Editor\EditorExtensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\EstacionamientoController.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScriptsGame\ControllerCameras.cs" Line="37" Column="15" />
+      <File FileName="Assets\ScriptsGame\ClsMostrarMensajes.cs" Line="24" Column="2" />
+      <File FileName="Assets\KinectScripts\KinectManager.cs" Line="534" Column="23" />
+      <File FileName="Assets\ScriptsGame\MoveAtoB.cs" Line="22" Column="23" />
+      <File FileName="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Scripts\Editor\FlowchartWindow.cs" Line="113" Column="7" />
+      <File FileName="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Scripts\Editor\VariableEditor.cs" Line="165" Column="1" />
+      <File FileName="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Thirdparty\FungusLua\Scripts\Editor\LuaBindingsEditor.cs" Line="331" Column="14" />
+      <File FileName="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Thirdparty\Usfxr\Editor\SfxrGenerator.cs" Line="326" Column="22" />
+      <File FileName="Assets\Fungus\Scripts\Editor\BlockEditor.cs" Line="47" Column="39" />
+      <File FileName="Assets\Fungus\Scripts\Editor\BlockInspector.cs" Line="38" Column="58" />
+      <File FileName="Assets\Fungus\Scripts\Editor\SaveMenuEditor.cs" Line="24" Column="19" />
+      <File FileName="Assets\Fungus\Scripts\Editor\VariableListAdaptor.cs" Line="119" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -21,6 +32,7 @@
       <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="21" column="1" />
       <Breakpoint file="D:\Tesis\Tesis\New Unity Project 1\Assets\Nieveles\seleccion personaje\clickPrueba.cs" line="19" column="1" />
       <Breakpoint file="C:\Users\mychael.castro\Document\Tesis\New Unity Project 1\Assets\Resources\nivel 8\ControllerNivel8.cs" line="23" column="1" />
+      <Breakpoint file="c:\Users\mychael.castro\Documents\TESIS\Tesis\New Unity Project 1\Assets\Fungus\Scripts\Editor\EditorExtensions.cs" line="22" column="145" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

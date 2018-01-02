@@ -162,7 +162,7 @@ namespace SwipeMenu
 		/// <param name="item">Item.</param>
 		public bool MenuCentred (MenuItem item)
 		{
-			return item.transform.position.x == 0;
+			return  true;
 		}
 
 		/// <summary>
@@ -206,13 +206,13 @@ namespace SwipeMenu
 		/// </summary>
 		private void ParentMenuItems ()
 		{
-			foreach (var menu in menuItems) {
+			/*foreach (var menu in menuItems) {
 				if (menu == null) {
 					Debug.LogError ("Menu item not set in inspector");
 				} else {
 					menu.transform.SetParent (transform);
 				}
-			}
+			}*/
 		}
 
 		/// <summary>
@@ -223,7 +223,7 @@ namespace SwipeMenu
 		{
 			MenuItem item = null;
 			
-			float xOffset = float.MaxValue;
+			/*float xOffset = float.MaxValue;
 			
 			foreach (var i in menuItems) {
 				var x = CalculateOffsetFromX (i.gameObject.transform.position.x, 0);
@@ -235,7 +235,7 @@ namespace SwipeMenu
 					item = i;
 					xOffset = x;
 				}
-			}
+			}*/
 
 			return item;
 		}
@@ -337,7 +337,7 @@ namespace SwipeMenu
 		/// </summary>
 		public void UpdateMenuItemsPositionInWorldSpace ()
 		{
-			for (int i = 0; i < menuItems.Length; i++) {
+		/*	for (int i = 0; i < menuItems.Length; i++) {
 				float offsetx = distanceBetweenMenus * (i + 1) - _currentMenuPosition;
 				float posx = CalculateMenuItemXPosition (offsetx);
 				float posz = CalculateMenuItemZPosition (offsetx);
@@ -345,7 +345,7 @@ namespace SwipeMenu
 				menuItems [i].transform.position = pos;
 				Vector3 euler = new Vector3 (0, CalculateMenuItemRotation (offsetx), 0);
 				menuItems [i].transform.eulerAngles = euler;
-			}
+			}*/
 		}
 
 		public void UpdateMenuItemsPositionInWorldSpace (float n)
